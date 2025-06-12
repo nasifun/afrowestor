@@ -39,14 +39,14 @@ nav a {
   text-transform: uppercase;
 }
 
-/* 4. Hero & Tagline */
 .hero {
-  background: url('BURNER AFROWESTOR 2025 .png') no-repeat center center/cover;
+  background: url('https://www.afrowestor.com/BURNER%20AFROWESTOR%202025%20.png') no-repeat center center/cover;
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .tagline {
   padding: 40px 20px;
