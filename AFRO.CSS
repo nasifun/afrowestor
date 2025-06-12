@@ -364,26 +364,42 @@ video {
   }
 }
 
-/* Hero Overlay Text Fix for Mobile */
-.hero-overlay {
-  text-align: center;
-  padding: 10px 20px;
-  max-width: 100%;
+.hero {
+  background-image: url('https://www.afrowestor.com/bg%20cover%20png.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   box-sizing: border-box;
+  text-align: center;
+  position: relative;
 }
 
 .hero-overlay h1 {
-  font-size: 32px;
-  line-height: 1.2;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 3rem;
   font-weight: 800;
-  word-wrap: break-word;
-  white-space: normal;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  margin: 0;
+  line-height: 1.2;
 }
 
-/* Adjust text size on small screens */
+/* ✅ Mobile Fixes */
 @media screen and (max-width: 600px) {
+  .hero {
+    background-size: contain;
+    height: auto;
+    padding: 60px 20px;
+  }
+
   .hero-overlay h1 {
-    font-size: 24px;
-    padding: 0 10px;
+    font-size: 1.8rem;
+    line-height: 1.3;
   }
 }
+
