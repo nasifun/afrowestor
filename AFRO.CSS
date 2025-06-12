@@ -384,13 +384,13 @@ video {
   font-size: 3rem;
   font-weight: 800;
   color: white;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 6px rgba(172, 171, 171, 0.6);
   margin: 0;
   line-height: 1.2;
 }
 
 /* ✅ Mobile Fixes */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .hero {
     background-size: contain;
     height: auto;
