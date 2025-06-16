@@ -475,6 +475,7 @@ video {
 
 /* payment end here 2 must remove */
 
+/* === RENT ME SECTION === */
 .rent-options {
   display: flex;
   flex-wrap: wrap;
@@ -523,7 +524,7 @@ video {
   background-color: #444;
 }
 
-/* Mobile Fix */
+/* 📱 Responsive Fix */
 @media screen and (max-width: 600px) {
   .rent-options {
     flex-direction: column;
