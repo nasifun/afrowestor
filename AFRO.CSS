@@ -477,68 +477,61 @@ video {
 
 /* RENT SECTION */
 .rent-options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.rent-box {
-  background: #fff8e1;
-  border: 2px solid #ffc107;
-  border-radius: 10px;
-  padding: 1rem;
-  width: 100%;
-  max-width: 360px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.rent-box h3 {
-  font-size: 1.1rem;
-  font-family: 'Work Sans', sans-serif;
-  margin-bottom: 0.4rem;
-}
-
-.rent-box p {
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-/* Better button styling */
-.rent-button {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 12px 20px;
-  font-size: 0.95rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.rent-button:hover {
-  background: #333;
-}
-
-/* Responsive spacing for mobile */
-@media screen and (max-width: 600px) {
-  #working h2 {
-    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     margin-top: 0;
   }
 
   .rent-box {
-    margin: 0 auto;
+    background: #fff9e6;
+    border: 2px solid #ffc107;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .rent-box h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .rent-box p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.4;
   }
 
   .rent-button {
-    width: 90%;
-    padding: 12px;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
   }
-}
+
+  .rent-button:hover {
+    background-color: #333;
+  }
+
+  @media screen and (max-width: 600px) {
+    .rent-options {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rent-box {
+      margin-bottom: 20px;
+    }
+  }
