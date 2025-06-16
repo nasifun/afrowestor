@@ -471,70 +471,7 @@ video {
 
 /* payment start here */
 
-.rent-heading {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
 
-.rent-options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.rent-box {
-  background: #fff8e1;
-  border: 2px solid #ffc107;
-  border-radius: 12px;
-  padding: 20px;
-  width: 100%;
-  max-width: 320px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.rent-box h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #000;
-}
-
-.rent-box p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-.rent-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-family: 'Work Sans', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.rent-button:hover {
-  background-color: #444;
-}
-
-/* Mobile Responsive Fix */
-@media screen and (max-width: 600px) {
-  .rent-box {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .rent-heading {
-    font-size: 1.5rem;
-  }
-}
 
 /* payment end here 2 must remove */
 
