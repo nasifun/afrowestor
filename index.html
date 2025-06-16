@@ -304,52 +304,40 @@ Today, I bring decades of craft, intuition, and experience to every shoot. Wheth
 </div>
 
 
-  <!-- Optional Video -->
-  <section class="video-section">
-  <h2>Uganda 1979–1986 Documentary</h2>
-  <iframe width="100%" height="480"
-    src="https://www.youtube.com/embed/OWqqoqnxAvI"
-    title="Uganda 1979–1986"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+ <section class="video-album">
 
-  <section class="video-section">
-  <h2>Wamala Doc series</h2>
-  <iframe width="100%" height="480"
-    src="https://www.youtube.com/embed/6WSgGsWUkQc"
-    title="Wamala doc series"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <div class="video-thumb" data-video="OWqqoqnxAvI">
+    <img src="https://img.youtube.com/vi/OWqqoqnxAvI/hqdefault.jpg" alt="Uganda 1979–1986 Documentary">
+    <h3>Uganda 1979–1986 Documentary</h3>
+  </div>
 
-  <section class="video-section">
-  <h2>The Most Corrupt Judges in Uganda</h2>
-  <iframe width="100%" height="480"
-    src="https://www.youtube.com/embed/yLrtDOgUKmM"
-    title="The Most Corrupt Judges in Uganda"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <div class="video-thumb" data-video="6WSgGsWUkQc">
+    <img src="https://img.youtube.com/vi/6WSgGsWUkQc/hqdefault.jpg" alt="Wamala Doc Series">
+    <h3>Wamala Doc Series</h3>
+  </div>
+
+  <div class="video-thumb" data-video="OWqqoqnxAvI">
+    <img src="https://img.youtube.com/vi/OWqqoqnxAvI/hqdefault.jpg" alt="Corrupt Judges">
+    <h3>The Most Corrupt Judges in Uganda</h3>
+  </div>
+
+  <div class="video-thumb" data-video="E13DHJ636eU">
+    <img src="https://img.youtube.com/vi/E13DHJ636eU/hqdefault.jpg" alt="TONIGHT WITH HENRY GOMBYA">
+    <h3>TONIGHT WITH HENRY GOMBYA</h3>
+  </div>
 
 </section>
 
-
-
-</section>
-
-</section>
-
-
-
-  
-  
+<!-- Lightbox Modal -->
+<div class="video-lightbox" id="videoLightbox">
+  <div class="video-popup">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <iframe id="lightboxVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
 </div>
 
 </section>
+
 
 <section id="working" class="page-section">
   <h2>Working With Me</h2>
@@ -465,6 +453,25 @@ Today, I bring decades of craft, intuition, and experience to every shoot. Wheth
 
   function scrollToBottom() {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+</script>
+
+<script>
+  const videoThumbs = document.querySelectorAll(".video-thumb");
+  const lightbox = document.getElementById("videoLightbox");
+  const iframe = document.getElementById("lightboxVideo");
+
+  videoThumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      const videoId = thumb.getAttribute("data-video");
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.style.display = "none";
+    iframe.src = ""; // Stop the video
   }
 </script>
 

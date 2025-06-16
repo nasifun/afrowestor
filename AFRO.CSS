@@ -404,3 +404,89 @@ video {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   object-fit: cover;
 }
+
+.video-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.video-item {
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-item h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.video-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.video-thumb {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.video-thumb img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.video-thumb:hover {
+  transform: scale(1.03);
+}
+
+.video-thumb h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Lightbox Styles */
+.video-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.video-popup {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+.video-popup iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 12px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
