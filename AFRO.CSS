@@ -548,3 +548,67 @@ video {
   text-shadow: 0 0 10px #000;
   pointer-events: none;
 }
+
+/* Fix spacing and centering for video gallery section */
+.video-gallery-section {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-top: 3px solid #ffc107;
+  border-bottom: 3px solid #ffc107;
+  max-width: 100%;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 1.4rem; /* smaller heading for mobile */
+  margin: 0.5rem auto 1rem auto;
+  padding: 0;
+  line-height: 1.2;
+  max-width: 90%;
+}
+
+/* Grid layout for video items */
+.video-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Individual video blocks */
+.video-thumb {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.video-thumb img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.video-thumb h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Play icon */
+.play-icon {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 8px #000;
+  pointer-events: none;
+}
