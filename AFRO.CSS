@@ -469,30 +469,35 @@ video {
   }
 }
 
+.rent-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
 .rent-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 20px;
 }
 
 .rent-box {
-  background-color: #fff8e1;
+  background: #fff8e1;
   border: 2px solid #ffc107;
   border-radius: 12px;
-  padding: 30px;
-  text-align: center;
+  padding: 20px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .rent-box h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   color: #000;
-  margin-bottom: 1rem;
 }
 
 .rent-box p {
@@ -507,8 +512,9 @@ video {
   background-color: #000;
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
   border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
   transition: background-color 0.3s ease;
 }
 
@@ -516,13 +522,14 @@ video {
   background-color: #444;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive Fix */
 @media screen and (max-width: 600px) {
   .rent-box {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
-}
 
-#working h2 {
-  margin-bottom: 0.5rem;
+  .rent-heading {
+    font-size: 1.5rem;
+  }
 }
