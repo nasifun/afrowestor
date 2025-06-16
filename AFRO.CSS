@@ -481,84 +481,62 @@ video {
 /* payment end here 2 must remove */
 
 /* === RENT ME SECTION === */
-/* ✅ RENT SECTION - FIXED MOBILE STYLING */
-/* === RENT ME SECTION === */
+/* === RENT ME – Minimal Clean Style === */
 .rent-options {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.2rem;
-  padding: 1rem 0;
-}
-
-.rent-box {
-  background: #fff8e1;
-  border: 2px solid #ffc107;
-  border-radius: 12px;
-  padding: 1.2rem 1rem;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
   text-align: center;
+}
+
+.rent-service {
   font-family: 'Playfair Display', serif;
-  margin: 0 auto;
-}
-
-.rent-box h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.7rem;
-  color: #000;
-  line-height: 1.4;
-}
-
-.rent-box p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #333;
   line-height: 1.6;
-  color: #444;
-  margin-bottom: 1rem;
-  padding: 0 0.3rem;
+}
+
+.rent-service span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #000;
+  display: block;
+  margin: 0.5rem 0;
 }
 
 .rent-button {
   background: #000;
   color: #fff;
-  padding: 12px 20px;
+  padding: 10px 22px;
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
+  margin-top: 0.6rem;
   transition: background 0.3s ease;
 }
 
 .rent-button:hover {
-  background: #333;
+  background-color: #333;
 }
 
-/* ✅ Mobile tweak to hide description & tighten layout */
+/* Optional for mobile */
 @media screen and (max-width: 480px) {
-  .rent-box {
-    padding: 0.8rem;
-    width: 90%;
-    background: #fff8e1;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  .rent-service {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
-  .rent-box h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .rent-box p {
-    display: none; /* hide text */
+  .rent-service span {
+    font-size: 1.2rem;
   }
 
   .rent-button {
-    width: 100%;
+    width: auto;
     font-size: 1rem;
-    padding: 10px;
   }
 }
 
