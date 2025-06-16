@@ -390,249 +390,7 @@ video {
 }
 
 /* 🎥 Video Gallery */
-.video-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-  padding: 0 20px;
-}
-
-.video-gallery video {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-.video-album {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.video-item {
-  text-align: center;
-  background: #f4f4f4;
-  border-radius: 12px;
-  padding: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.video-item h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-
-.video-item iframe {
-  width: 100%;
-  height: 180px;
-  border-radius: 8px;
-}
-
-.video-album {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.video-thumb {
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.video-thumb img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.video-thumb:hover {
-  transform: scale(1.03);
-}
-
-.video-thumb h3 {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Lightbox Styles */
-.video-lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.video-popup {
-  position: relative;
-  width: 90%;
-  max-width: 800px;
-}
-
-.video-popup iframe {
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-}
-
-.close-btn {
-  position: absolute;
-  top: -30px;
-  right: -10px;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-.video-gallery-section {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-top: 3px solid #ffc107;
-  border-bottom: 3px solid #ffc107;
-}
-
-.video-title {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.video-album {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.video-thumb {
-  position: relative;
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.2s ease;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.video-thumb:hover {
-  transform: scale(1.02);
-}
-
-.video-thumb img {
-  width: 100%;
-  display: block;
-  border-bottom: 2px solid #eee;
-}
-
-.video-thumb h3 {
-  font-size: 0.9rem;
-  padding: 0.5rem;
-  color: #333;
-}
-
-.play-icon {
-  position: absolute;
-  top: 40%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 0 0 10px #000;
-  pointer-events: none;
-}
-
-/* Fix spacing and centering for video gallery section */
-.video-gallery-section {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-top: 3px solid #ffc107;
-  border-bottom: 3px solid #ffc107;
-  max-width: 100%;
-  text-align: center;
-}
-
-.video-title {
-  font-size: 1.4rem; /* smaller heading for mobile */
-  margin: 0.5rem auto 1rem auto;
-  padding: 0;
-  line-height: 1.2;
-  max-width: 90%;
-}
-
-/* Grid layout for video items */
-.video-album {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  justify-content: center;
-  padding: 0;
-}
-
-/* Individual video blocks */
-.video-thumb {
-  background: white;
-  padding: 0.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 300px;
-  margin: 0 auto;
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
-.video-thumb img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-}
-
-.video-thumb h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0 0;
-  padding: 0;
-  color: #333;
-}
-
-/* Play icon */
-.play-icon {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 0 0 8px #000;
-  pointer-events: none;
-}
-
-
-/* === IMAGE GALLERY === */
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-  justify-items: center;
-  max-width: 100%;
-}
-
-.image-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-
-/* === VIDEO GALLERY SECTION === */
+/* === VIDEO GALLERY SECTION (FINAL CLEAN VERSION) === */
 .video-gallery-section {
   background: #f9f9f9;
   padding: 1.5rem 0;
@@ -642,35 +400,39 @@ video {
 }
 
 .video-title {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 0 auto 1.5rem auto;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 90%;
 }
 
-/* Responsive video album grid */
+/* Responsive grid layout */
 .video-album {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  gap: 1.2rem;
   padding: 0 1rem;
   justify-content: center;
 }
 
-/* Each video card */
+/* Video block */
 .video-thumb {
   background: white;
   border-radius: 10px;
   padding: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 300px;
   margin: 0 auto;
   position: relative;
+  transition: transform 0.2s ease;
 }
 
 .video-thumb img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  display: block;
 }
 
 .video-thumb h3 {
@@ -680,7 +442,7 @@ video {
   color: #333;
 }
 
-/* Play button overlay */
+/* Play icon overlay */
 .play-icon {
   position: absolute;
   top: 42%;
@@ -690,4 +452,19 @@ video {
   color: white;
   text-shadow: 0 0 8px #000;
   pointer-events: none;
+}
+
+/* ✅ Optional: Mobile Tweak */
+@media screen and (max-width: 480px) {
+  .video-thumb h3 {
+    font-size: 0.9rem;
+  }
+
+  .video-title {
+    font-size: 1.3rem;
+  }
+
+  .play-icon {
+    font-size: 2rem;
+  }
 }
