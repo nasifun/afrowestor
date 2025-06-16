@@ -39,9 +39,6 @@ nav a {
   text-transform: uppercase;
 }
 
-
-
-
 .tagline {
   padding: 40px 20px;
   text-align: center;
@@ -325,11 +322,9 @@ video {
   border-color: #f9f7f7;
 }
 
-/* remove me am not woring good on the phone site 
-/* Make nav vertical and aligned on mobile */
+/* Mobile Navigation Fix */
 @media screen and (max-width: 768px) {
   header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -358,19 +353,17 @@ video {
   }
 }
 
+/* Hero section background image */
 .hero {
   width: 100%;
-  background-image: url('https://www.afrowestor.com/BURNER AFROWESTOR 2025 .png'); /* Replace with your real image path */
+  background-image: url('https://www.afrowestor.com/BURNER%20AFROWESTOR%202025%20.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  aspect-ratio: 16 / 9; /* This keeps a nice mobile-friendly ratio */
+  aspect-ratio: 16 / 9;
   display: block;
 }
-
-
-
 
 .hero-overlay h1 {
   font-family: 'Work Sans', sans-serif;
@@ -382,14 +375,12 @@ video {
   line-height: 1.2;
 }
 
-/* ✅ Mobile Fixes */
+/* Mobile Hero Adjustments */
 @media screen and (max-width: 600px) {
   .hero {
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
+    background-size: contain;
     height: auto;
-    padding: 60px 0;
+    padding: 60px 20px;
   }
 
   .hero-overlay h1 {
@@ -397,4 +388,3 @@ video {
     line-height: 1.3;
   }
 }
-
