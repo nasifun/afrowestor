@@ -385,9 +385,11 @@ video {
 /* ✅ Mobile Fixes */
 @media screen and (max-width: 600px) {
   .hero {
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
     height: auto;
-    padding: 60px 20px;
+    padding: 60px 0;
   }
 
   .hero-overlay h1 {
