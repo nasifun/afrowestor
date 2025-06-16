@@ -331,7 +331,7 @@ video {
   border-color: #f9f7f7;
 }
 
-
+/* remove me am not woring good on the phone site 
 /* Make nav vertical and aligned on mobile */
 @media screen and (max-width: 768px) {
   header {
@@ -365,19 +365,18 @@ video {
 }
 
 .hero {
-  background-image: url('https://www.afrowestor.com/BURNER%20AFROWESTOR%202025%20.png');
+  width: 100%;
+  background-image: url('https://www.afrowestor.com/BURNER AFROWESTOR 2025 .png'); /* Replace with your real image path */
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px;
-  box-sizing: border-box;
-  text-align: center;
-  position: relative;
+  height: auto;
+  aspect-ratio: 16 / 9; /* This keeps a nice mobile-friendly ratio */
+  display: block;
 }
+
+
+
 
 .hero-overlay h1 {
   font-family: 'Work Sans', sans-serif;
