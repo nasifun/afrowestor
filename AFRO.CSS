@@ -470,6 +470,11 @@ video {
 }
 
 /* payment start here */
+.page-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
 
 
 
@@ -477,6 +482,7 @@ video {
 
 /* === RENT ME SECTION === */
 /* ✅ RENT SECTION - FIXED MOBILE STYLING */
+/* === RENT ME SECTION === */
 .rent-options {
   display: flex;
   flex-wrap: wrap;
@@ -530,24 +536,29 @@ video {
   background: #333;
 }
 
-/* Mobile tweaks */
+/* ✅ Mobile tweak to hide description & tighten layout */
 @media screen and (max-width: 480px) {
   .rent-box {
-    padding: 1rem;
+    padding: 0.8rem;
     width: 90%;
+    background: #fff8e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
 
   .rent-box h3 {
     font-size: 1.1rem;
+    margin-bottom: 0.5rem;
   }
 
   .rent-box p {
-    font-size: 0.95rem;
+    display: none; /* hide text */
   }
 
   .rent-button {
     width: 100%;
     font-size: 1rem;
+    padding: 10px;
   }
 }
 
