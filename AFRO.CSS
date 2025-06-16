@@ -475,63 +475,62 @@ video {
 
 /* payment end here 2 must remove */
 
-/* RENT SECTION */
 .rent-options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.rent-box {
+  background: #fff8e1;
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.rent-box h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.rent-box p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.rent-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+  background-color: #444;
+}
+
+/* Mobile Fix */
+@media screen and (max-width: 600px) {
+  .rent-options {
+    flex-direction: column;
+    align-items: center;
   }
 
   .rent-box {
-    background: #fff9e6;
-    border: 2px solid #ffc107;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 320px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 90%;
   }
-
-  .rent-box h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  .rent-box p {
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 15px;
-    line-height: 1.4;
-  }
-
-  .rent-button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-
-  .rent-button:hover {
-    background-color: #333;
-  }
-
-  @media screen and (max-width: 600px) {
-    .rent-options {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .rent-box {
-      margin-bottom: 20px;
-    }
-  }
+}
