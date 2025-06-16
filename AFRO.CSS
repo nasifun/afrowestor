@@ -469,6 +469,8 @@ video {
   }
 }
 
+/* payment start here */
+
 .rent-heading {
   text-align: center;
   font-size: 1.8rem;
@@ -531,5 +533,75 @@ video {
 
   .rent-heading {
     font-size: 1.5rem;
+  }
+}
+
+/* payment end here 2 must remove */
+
+/* RENT SECTION */
+.rent-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.rent-box {
+  background: #fff8e1;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.rent-box h3 {
+  font-size: 1.1rem;
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 0.4rem;
+}
+
+.rent-box p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Better button styling */
+.rent-button {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.rent-button:hover {
+  background: #333;
+}
+
+/* Responsive spacing for mobile */
+@media screen and (max-width: 600px) {
+  #working h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .rent-box {
+    margin: 0 auto;
+  }
+
+  .rent-button {
+    width: 90%;
+    padding: 12px;
   }
 }
