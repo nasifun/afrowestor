@@ -305,52 +305,58 @@ Today, I bring decades of craft, intuition, and experience to every shoot. Wheth
 
 
 
- <section class="video-gallery-section">
-  <h2 class="video-title"> Documentaries Trailers </h2>
+
+  </div>
+<section class="video-gallery-section">
+  <h2 class="video-title">Documentaries Trailers</h2>
 
   <div class="video-album">
 
+    <!-- 1 -->
     <div class="video-thumb" data-video="OWqqoqnxAvI">
       <div class="play-icon">▶</div>
       <img src="https://img.youtube.com/vi/OWqqoqnxAvI/hqdefault.jpg" alt="Uganda 1979–1986 Documentary">
       <h3>Uganda 1979–1986 Documentary</h3>
     </div>
 
+    <!-- 2 -->
     <div class="video-thumb" data-video="6WSgGsWUkQc">
       <div class="play-icon">▶</div>
       <img src="https://img.youtube.com/vi/6WSgGsWUkQc/hqdefault.jpg" alt="Wamala Doc Series">
       <h3>Wamala Doc Series</h3>
     </div>
 
+    <!-- 3 -->
     <div class="video-thumb" data-video="yLrtDOgUKmM">
       <div class="play-icon">▶</div>
       <img src="https://img.youtube.com/vi/yLrtDOgUKmM/hqdefault.jpg" alt="Corrupt Judges">
       <h3>The Most Corrupt Judges in Uganda</h3>
     </div>
 
+    <!-- 4 -->
     <div class="video-thumb" data-video="E13DHJ636eU">
       <div class="play-icon">▶</div>
       <img src="https://img.youtube.com/vi/E13DHJ636eU/hqdefault.jpg" alt="TONIGHT WITH HENRY GOMBYA">
       <h3>TONIGHT WITH HENRY GOMBYA</h3>
     </div>
 
+    <!-- 5 -->
     <div class="video-thumb" data-video="KDBnJoUr4Qo">
       <div class="play-icon">▶</div>
-      <img src="https://img.youtube.com/vi/KDBnJoUr4Qo/hqdefault.jpg" alt="Torture murder in UGANADA">
-      <h3>Torture murder in UGANAD</h3>
+      <img src="https://img.youtube.com/vi/KDBnJoUr4Qo/hqdefault.jpg" alt="Torture murder in UGANDA">
+      <h3>Torture Murder in Uganda</h3>
     </div>
 
+    <!-- 6 -->
     <div class="video-thumb" data-video="Q32qor5Geso">
       <div class="play-icon">▶</div>
-      <img src="https://img.youtube.com/vi/Q32qor5Geso/hqdefault.jpg" alt="ANDREW-KAYIIRA">
-      <h3>Andrew Kayiira A True Ugandan Hero</h3>
+      <img src="https://img.youtube.com/vi/Q32qor5Geso/hqdefault.jpg" alt="Andrew Kayiira">
+      <h3>Andrew Kayiira – A True Ugandan Hero</h3>
     </div>
-
 
   </div>
 </section>
 
-<!-- Lightbox Modal -->
 
 
 
@@ -504,24 +510,42 @@ Today, I bring decades of craft, intuition, and experience to every shoot. Wheth
   }
 </script>
 
-<script>
-  const videoThumbs = document.querySelectorAll(".video-thumb");
-  const lightbox = document.getElementById("videoLightbox");
-  const iframe = document.getElementById("lightboxVideo");
+<!-- youtube video js -->
 
-  videoThumbs.forEach(thumb => {
-    thumb.addEventListener("click", () => {
-      const videoId = thumb.getAttribute("data-video");
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-      lightbox.style.display = "flex";
+<!-- Lightbox Modal -->
+<div class="video-lightbox" id="videoLightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 1000;">
+  <div class="video-popup" style="position: relative; max-width: 90%; max-height: 90%;">
+    <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: -40px; right: 0; font-size: 2rem; color: white; cursor: pointer;">&times;</span>
+    <iframe id="lightboxVideo" src="" width="100%" height="500px" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- JavaScript to Handle Click and Lightbox -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const videoThumbs = document.querySelectorAll(".video-thumb");
+    const lightbox = document.getElementById("videoLightbox");
+    const iframe = document.getElementById("lightboxVideo");
+
+    videoThumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        const videoId = thumb.getAttribute("data-video");
+        if (videoId) {
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          lightbox.style.display = "flex";
+        }
+      });
     });
   });
 
   function closeLightbox() {
+    const lightbox = document.getElementById("videoLightbox");
+    const iframe = document.getElementById("lightboxVideo");
     lightbox.style.display = "none";
     iframe.src = ""; // Stop the video
   }
 </script>
+
 
 
 
