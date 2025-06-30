@@ -734,3 +734,57 @@ video {
   padding-top: 40px;
   padding-bottom: 32px;
 }
+
+/* Tighter "Rent Me" heading on mobile */
+@media (max-width: 600px) {
+  .page-section h2 {
+    font-size: 1.2rem !important;
+    margin-top: 10px !important;
+    margin-bottom: 18px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+  }
+}
+
+/* Rent Me blocks: smaller, not too wide, less tall, better buttons */
+@media (max-width: 600px) {
+  .rent-options {
+    padding: 0.7rem 0 0.7rem 0 !important;
+    gap: 0.7rem !important;
+  }
+  .rent-service {
+    max-width: 98vw !important;
+    min-width: 0;
+    height: 135px !important;
+    margin: 0 auto !important;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .rent-content {
+    font-size: 0.92rem !important;
+    padding: 0.4rem 0.4rem !important;
+  }
+  .rent-content span {
+    font-size: 1.13rem !important;
+  }
+  .rent-button {
+    font-size: 1.02rem !important;
+    padding: 7px 2px !important;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    width: 96%;
+    max-width: 290px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/* Fix for ALL screens: Remove extra space below Rent Me blocks */
+.rent-service {
+  margin-bottom: 12px !important;
+}
+
