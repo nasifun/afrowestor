@@ -574,6 +574,12 @@ video {
   
 }
 
+@media (min-width: 700px) {
+  .rent-content {
+    padding-bottom: 30px; /* Add more if needed */
+  }
+}
+
 
 
   .rent-content span {
