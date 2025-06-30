@@ -466,54 +466,42 @@ video {
 
 /* === RENT ME SECTION === */
 /* --- Improved styles for mobile, 2024-06-30 --- */
+/* === RENT ME SECTION (Fully Responsive, Wide on Desktop, Stacked on Mobile) === */
+
 .rent-options {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
   padding: 1.5rem 0;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
-  .rent-options {
-    padding: 0.8rem 0;
-  }
-  .rent-service {
-    width: 96vw;
-    max-width: none;
-    min-width: 0;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    height: auto;
-  }
-  .rent-overlay {
-    padding: 1rem 0.7rem;
-  }
-  .rent-content {
-    font-size: 1.06rem;
-    padding: 0.3rem 0.1rem;
-    line-height: 1.65;
-  }
-  .rent-content span {
-    font-size: 1.25rem;
-  }
-  .rent-button {
-    width: 96%;
-    font-size: 1.13rem;
-    padding: 12px 0;
-  }
+.rent-service {
+  position: relative;
+  width: 100%;
+  max-width: 420px;   /* Make this 500px for even wider cards if you want */
+  min-width: 280px;
+  height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+  transition: box-shadow 0.3s;
 }
-
+.rent-service:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.22);
+}
 
 .rent-overlay {
   background-color: rgba(0, 0, 0, 0.55);
-  min-height: 100%;
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.3rem;
+  padding: 1rem;
 }
 
 .rent-content {
@@ -535,53 +523,64 @@ video {
   background: #ffc107;
   color: #000;
   padding: 12px 28px;
-  font-weight: 700;
-  font-size: 1.08rem;
+  font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
-  margin-top: 16px;
+  margin-top: 10px;
   display: inline-block;
+  font-size: 1.2rem;
+  transition: background 0.3s;
 }
 
 .rent-button:hover {
   background-color: #ffb300;
 }
 
+/* Background images for service cards */
 .photo-bg {
-  background-image: url('photo-background.png');
+  background-image: url('photo-background.png'); /* Replace with your real photo URL */
 }
 .video-bg {
-  background-image: url('video-background.png');
+  background-image: url('video-background.png'); /* Replace with your real video URL */
 }
 
+/* Responsive (tablet & mobile) */
+@media screen and (max-width: 1000px) {
+  .rent-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  .rent-service {
+    width: 98vw;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 210px;
+  }
+}
+
+/* Extra small mobile tweaks */
 @media screen and (max-width: 600px) {
   .rent-service {
-    min-height: unset;
-    height: auto;
+    width: 98vw;
     max-width: 98vw;
-    margin: 0 0 18px 0;
+    min-width: unset;
+    height: 180px;
   }
-
-  .rent-overlay {
-    padding: 1.2rem 0.7rem;
-  }
-
   .rent-content {
-    font-size: 1.06rem;
-    padding: 0.3rem 0.1rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    padding: 0 0.2em;
   }
-
   .rent-content span {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
-
   .rent-button {
-    width: 95%;
-    font-size: 1.13rem;
-    padding: 12px 0;
+    padding: 9px 0;
+    width: 90%;
+    font-size: 1rem;
   }
 }
+
 
 /* === FOOTER SECTION === */
 .site-footer {
