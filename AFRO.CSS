@@ -390,7 +390,6 @@ video {
 }
 
 /* 🎥 Video Gallery */
-/* === VIDEO GALLERY SECTION (FINAL CLEAN VERSION) === */
 .video-gallery-section {
   background: #f9f9f9;
   padding: 1.5rem 0;
@@ -407,7 +406,6 @@ video {
   max-width: 90%;
 }
 
-/* Responsive grid layout */
 .video-album {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -416,7 +414,6 @@ video {
   justify-content: center;
 }
 
-/* Video block */
 .video-thumb {
   background: white;
   border-radius: 10px;
@@ -442,7 +439,6 @@ video {
   color: #333;
 }
 
-/* Play icon overlay */
 .play-icon {
   position: absolute;
   top: 42%;
@@ -454,7 +450,6 @@ video {
   pointer-events: none;
 }
 
-/* ✅ Optional: Mobile Tweak */
 @media screen and (max-width: 480px) {
   .video-thumb h3 {
     font-size: 0.9rem;
@@ -469,19 +464,8 @@ video {
   }
 }
 
-/* payment start here */
-.page-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-
-
-
-/* payment end here 2 must remove */
-
 /* === RENT ME SECTION === */
-/* === RENT ME – Minimal Clean Style === */
+/* --- Improved styles for mobile, 2024-06-30 --- */
 .rent-options {
   display: flex;
   flex-direction: column;
@@ -490,50 +474,53 @@ video {
   padding: 1.5rem 0;
 }
 
-/* Common styles for each service */
 .rent-service {
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 220px;
   border-radius: 14px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  min-height: 220px; /* Changed from height: 220px */
 }
 
 .rent-overlay {
   background-color: rgba(0, 0, 0, 0.55);
+  min-height: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.3rem;
 }
 
 .rent-content {
   color: #fff;
   text-align: center;
   font-family: 'Playfair Display', serif;
-  line-height: 1.6;
+  line-height: 1.7;
+  width: 100%;
 }
 
 .rent-content span {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: bold;
   display: block;
-  margin: 0.3rem 0;
+  margin: 0.4rem 0;
 }
 
 .rent-button {
   background: #ffc107;
   color: #000;
-  padding: 10px 20px;
-  font-weight: 600;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 1.08rem;
   border-radius: 6px;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 16px;
   display: inline-block;
 }
 
@@ -541,36 +528,43 @@ video {
   background-color: #ffb300;
 }
 
-/* Background images */
 .photo-bg {
-  background-image: url('photo-background.png'); /* replace with your real photo */
+  background-image: url('photo-background.png');
 }
-
 .video-bg {
-  background-image: url('video-background.png'); /* replace with your real video */
+  background-image: url('video-background.png');
 }
 
-/* Mobile responsive */
 @media screen and (max-width: 600px) {
   .rent-service {
-    height: 180px;
+    min-height: unset;
+    height: auto;
+    max-width: 98vw;
+    margin: 0 0 18px 0;
+  }
+
+  .rent-overlay {
+    padding: 1.2rem 0.7rem;
   }
 
   .rent-content {
-    font-size: 0.95rem;
+    font-size: 1.06rem;
+    padding: 0.3rem 0.1rem;
+    line-height: 1.65;
   }
 
   .rent-content span {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .rent-button {
-    padding: 8px 16px;
+    width: 95%;
+    font-size: 1.13rem;
+    padding: 12px 0;
   }
 }
 
 /* === FOOTER SECTION === */
-
 .site-footer {
   background-image: url('footer3.png'); /* upload and use your image */
   background-size: cover;
@@ -601,7 +595,7 @@ video {
   color: #fff;
 }
 
-/* Mobile responsive */
+/* Mobile responsive footer */
 @media screen and (max-width: 600px) {
   .footer-content h3 {
     font-size: 1.3rem;
@@ -611,6 +605,3 @@ video {
     font-size: 0.95rem;
   }
 }
-
-
-
