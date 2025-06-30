@@ -574,11 +574,7 @@ video {
   
 }
 
-@media screen and (min-width: 601px) {
-  .rent-content {
-    padding-bottom: 32px;
-  }
-}
+
 
   .rent-content span {
     font-size: 1.3rem;
