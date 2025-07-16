@@ -27,11 +27,11 @@
 .banner-detail-img {
   width: 100%;
   max-width: 100%;
-  max-height: 400px;
-  min-height: 120px;
+  max-height: 420px;   /* Increase as needed for desktop */
+  min-height: 180px;
   height: auto;
   object-fit: cover;
-  object-position: center bottom;   /* Show more of the bottom part of the image */
+  object-position: top center;  /* Shows more of the bottom */
   border-radius: 10px;
   margin-bottom: 30px;
   display: block;
@@ -116,6 +116,30 @@
     width: 96%;
     font-size: 1.02rem;
   }
+
+  .banner-detail-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 400px;
+  min-height: 120px;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;   /* Show more of the bottom part of the image */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: block;
+  background: none;
+}
+
+@media (max-width: 600px) {
+  .banner-detail-img {
+    max-height: 220px;        /* Increased from 140px to 220px for mobile! */
+    min-height: 90px;
+    object-position: center bottom;   /* Force bottom part to show */
+    margin-bottom: 17px;
+  }
+}
+
 }
 
   </style>
