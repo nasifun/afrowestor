@@ -836,15 +836,16 @@ video {
   color: #232323;
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
-  font-size: 1.17rem;
+  font-size: 1rem;       /* Smaller font */
   border: none;
   border-radius: 0 0 19px 19px;
-  padding: 17px 0 16px 0;
+  padding: 10px 0 9px 0; /* Less padding */
   text-align: center;
-  width: 100%;
+  width: 92%;            /* A bit of space on sides */
+  margin: 0 auto 10px auto;
   text-decoration: none;
   transition: background 0.16s;
-  margin: 0;
+  display: block;
 }
 
 .read-more-btn:hover,
@@ -855,22 +856,9 @@ video {
 }
 
 @media (max-width: 700px) {
-  .banners-title {
-    font-size: 1.33rem;
-    margin-bottom: 20px;
-  }
-  .banners-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 0 4px;
-  }
-  .banner-item img {
-    height: 110px;
-  }
   .read-more-btn {
-    font-size: 1rem;
-    padding: 11px 0 10px 0;
+    font-size: 0.95rem;
+    padding: 9px 0 8px 0;
+    width: 94%;
   }
 }
-
-
