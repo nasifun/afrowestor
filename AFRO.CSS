@@ -789,135 +789,85 @@ video {
 }
 
 /* Banners Gallery Section */
+/* --- Improved styles for banners gallery, 2024-06-30 --- */
 
-.banners-gallery {
-  padding: 32px 0 10px 0;
-  background: #121212;
-}
-.banners-title {
-  color: #ffc107;
+.banners-section {
+  padding: 40px 0 40px 0;
+  background: #181828;
   text-align: center;
+}
+
+.banners-title {
   font-family: 'Work Sans', sans-serif;
-  font-size: 2.1rem;
-  letter-spacing: 0.03em;
-  margin-bottom: 1.2rem;
+  font-size: 2.3rem;
+  color: #ffc107;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 
-.banners-list {
+.banners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
-.banner {
-  background: #232323;
-  border-radius: 14px;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.12);
-  overflow: hidden;
+.banner-item {
   display: flex;
   flex-direction: column;
+  background: #23233a;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
   text-decoration: none;
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.2s;
   position: relative;
-  width: 100%;
-  /* REMOVE min-height! */
 }
 
-.banner img {
+.banner-item:hover, .banner-item:focus {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.22);
+}
+
+.banner-item img {
   width: 100%;
-  height: 120px;
+  height: 170px;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  filter: brightness(0.96) contrast(1.1);
-  transition: filter 0.18s;
+  background: #222;
+  transition: filter 0.2s;
 }
 
-.banner-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 16px 10px 14px 10px;
+.banner-item:hover img, .banner-item:focus img {
+  filter: brightness(1.15) contrast(1.1);
 }
 
-.banner-content h3 {
+.banner-title {
   font-family: 'Playfair Display', serif;
-  color: #ffc107;
-  font-size: 1.09rem;
-  margin-bottom: 7px;
-  margin-top: 0;
-}
-.banner-content p {
-  color: #e7e7e7;
-  font-size: 0.98rem;
-  margin-bottom: 13px;
-  font-family: 'Work Sans', sans-serif;
-}
-.banner-btn {
-  background: #ffc107;
-  color: #222;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 0;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bold;
-  font-size: 0.97rem;
-  box-shadow: 0 2px 8px #2222;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  width: 100%;
-  margin-top: auto; /* Always pushes button to bottom if space allows */
+  color: #fff;
+  background: linear-gradient(90deg, #191970 0%, #0f0c29 100%);
+  font-size: 1.15rem;
+  padding: 18px 8px;
+  min-height: 65px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner:hover img {
-  filter: brightness(1.04) contrast(1.15) saturate(1.09);
-}
-.banner:hover {
-  transform: translateY(-3px) scale(1.012);
-  box-shadow: 0 4px 18px #ffc10766;
+@media (max-width: 900px) {
+  .banner-item img { height: 130px; }
+  .banner-title { font-size: 1rem; min-height: 56px; }
 }
 
-/* Mobile-only improvements */
 @media (max-width: 600px) {
-  .banners-title {
-    font-size: 1.22rem;
-    margin-bottom: 0.8rem;
+  .banners-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
-  .banners-list {
-    gap: 9px;
-    padding: 0 2px;
-    max-width: 99vw;
-  }
-  .banner {
-    /* No min-height! */
-    margin: 0 auto;
-    border-radius: 10px;
-  }
-  .banner img {
-    height: 80px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .banner-content {
-    padding: 10px 6px 10px 6px;
-  }
-  .banner-content h3 {
-    font-size: 0.96rem;
-    margin-bottom: 5px;
-  }
-  .banner-content p {
-    font-size: 0.91rem;
-    margin-bottom: 10px;
-  }
-  .banner-btn {
-    padding: 8px 0;
-    font-size: 0.96rem;
-    margin-top: 10px;
-  }
+  .banner-item img { height: 38vw; min-height: 120px; max-height: 200px; }
+  .banner-title { font-size: 0.98rem; min-height: 40px; }
 }
-
 
