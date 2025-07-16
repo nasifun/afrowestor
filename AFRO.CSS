@@ -792,109 +792,127 @@ video {
 /* --- Improved styles for banners gallery, 2024-06-30 --- */
 
 .banners-section {
-  padding: 28px 0 34px 0;
-  background: #181828;
-  text-align: center;
+  background: #10102a;
+  padding: 38px 0 60px 0;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
-
 .banners-title {
+  color: #ffd700;
   font-family: 'Work Sans', sans-serif;
-  font-size: 2.1rem;
-  color: #ffc107;
-  margin-bottom: 1.2em;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  margin-top: 0;
 }
-
 .banners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-  max-width: 850px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 8px;
+  padding: 0 2vw;
 }
-
 .banner-item {
-  display: flex;
-  flex-direction: column;
-  background: #23233a;
+  background: #181824;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-  text-decoration: none;
-  transition: transform 0.22s cubic-bezier(.22,1,.36,1), box-shadow 0.18s;
-  position: relative;
-}
-
-.banner-item:active,
-.banner-item:hover {
-  transform: scale(1.01);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.23);
-  z-index: 2;
-}
-
-.banner-item img {
-  width: 100%;
-  aspect-ratio: 16/8.2;
-  min-height: 105px;
-  max-height: 180px;
-  object-fit: cover;
-  background: #23233a;
-  transition: filter 0.18s;
-}
-
-.banner-item:active img,
-.banner-item:hover img {
-  filter: brightness(1.13) contrast(1.11);
-}
-
-.banner-title {
-  font-family: 'Playfair Display', serif;
-  color: #fff;
-  background: linear-gradient(90deg, #1a1a37 0%, #23233a 100%);
-  font-size: 1.07rem;
-  padding: 16px 10px;
-  min-height: 48px;
-  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-  word-break: break-word;
+  transition: transform 0.14s cubic-bezier(.4,0,.2,1), box-shadow 0.14s;
+  min-width: 0;
 }
-
-@media (max-width: 600px) {
-  .banners-section {
-    padding: 16px 0 20px 0;
-  }
+.banner-item:hover {
+  transform: translateY(-3px) scale(1.017);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.19);
+}
+.banner-item a img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  aspect-ratio: 16 / 8;
+  background: #242441;
+  min-height: 90px;
+  max-height: 155px;
+}
+.banner-caption {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.12rem;
+  color: #41f6ea;
+  text-align: center;
+  background: #151524;
+  width: 100%;
+  padding: 10px 0 6px 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 0 0 16px 16px;
+  margin: 0;
+}
+.read-more-btn {
+  margin-top: 16px;
+  background: #ffc107;
+  color: #181824;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  border-radius: 7px;
+  padding: 9px 0;
+  border: none;
+  width: 95%;
+  max-width: 235px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  text-decoration: none;
+  display: block;
+}
+.read-more-btn:hover {
+  background: #ffd700;
+  color: #222;
+}
+@media (max-width: 900px) {
   .banners-title {
-    font-size: 1.38rem;
-    margin-bottom: 1em;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
   }
   .banners-grid {
-    grid-template-columns: 1fr;
-    gap: 13px;
-    padding: 0 3vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
     max-width: 99vw;
   }
   .banner-item {
-    border-radius: 13px;
+    border-radius: 10px;
   }
-  .banner-item img {
-    aspect-ratio: 18/8.2;
-    min-height: 90px;
-    max-height: 142px;
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
+  .banner-item a img, .banner-caption {
+    border-radius: 10px 10px 0 0;
   }
-  .banner-title {
+}
+@media (max-width: 600px) {
+  .banners-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    padding: 0 1vw;
+  }
+  .banner-item {
+    border-radius: 7px;
+  }
+  .banner-item a img, .banner-caption {
+    border-radius: 7px 7px 0 0;
+    min-height: 54px;
+    max-height: 74px;
+    aspect-ratio: 16/10;
+  }
+  .read-more-btn {
     font-size: 0.95rem;
-    min-height: 35px;
-    padding: 10px 6px;
-    border-bottom-left-radius: 13px;
-    border-bottom-right-radius: 13px;
+    padding: 8px 0;
+    max-width: 98vw;
   }
 }
 
