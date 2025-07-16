@@ -863,3 +863,200 @@ video {
     width: 94%;
   }
 }
+
+/* DARK MODE */
+
+/* === GLOBAL DARK MODE BASE === */
+body {
+  background: #161616 !important;
+  color: #f7f7f7 !important;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background: #191925 !important;
+  border-bottom: 1px solid #24243a !important;
+}
+.logo {
+  color: #ffc107 !important;
+}
+nav a {
+  color: #ffc107 !important;
+  text-shadow: 0 1px 8px #10101040;
+}
+nav a:hover {
+  color: #fff !important;
+}
+
+/* --- Hero & Tagline --- */
+.tagline,
+.hero-overlay {
+  background: rgba(20, 20, 30, 0.91) !important;
+  color: #ffc107 !important;
+}
+.hero-overlay h1 {
+  color: #ffc107 !important;
+  text-shadow: 0 2px 16px #19192580;
+}
+
+/* --- Social Icons --- */
+.social-icons a {
+  color: #ffc107 !important;
+}
+.social-icons a:hover {
+  color: #fff !important;
+}
+
+/* --- Main Sections --- */
+.page-section,
+.intro,
+.blog-post,
+.contact-wrap,
+.testimonial-wrap blockquote {
+  background: #191925 !important;
+  color: #f6f6f6 !important;
+  border-color: #28283a !important;
+  box-shadow: 0 2px 20px rgba(16,16,40,0.13);
+}
+
+.intro-subtitle,
+.portfolio-subtitle,
+.contact-intro {
+  color: #ffc107 !important;
+}
+
+/* --- Gallery, Video Gallery --- */
+.image-gallery img,
+.video-thumb {
+  background: #232335 !important;
+  box-shadow: 0 2px 12px #000a;
+}
+.video-gallery-section {
+  background: #1e1e2a !important;
+  border-top: 3px solid #ffc107 !important;
+  border-bottom: 3px solid #ffc107 !important;
+}
+
+/* --- Banners Gallery Section --- */
+.banners-section {
+  background: #151528 !important;
+}
+.banners-title {
+  color: #ffc107 !important;
+}
+.banner-item {
+  background: #202034 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 22px #0005;
+}
+.banner-item img {
+  background: #181824 !important;
+  /* no color overlay so image looks natural on dark */
+}
+
+/* --- Rent Me Section --- */
+.rent-service {
+  background: #191928 !important;
+  box-shadow: 0 4px 20px #0007 !important;
+}
+.rent-overlay {
+  background-color: rgba(18,18,28,0.77) !important;
+}
+.rent-content span {
+  color: #ffc107 !important;
+}
+.rent-button {
+  background: #ffc107 !important;
+  color: #161616 !important;
+}
+.rent-button:hover {
+  background: #ff9900 !important;
+  color: #fff !important;
+}
+
+/* --- Blog --- */
+.blog-post {
+  background: #191925 !important;
+  color: #fff !important;
+}
+.blog-date {
+  color: #ffc107 !important;
+}
+
+/* --- Contact & Form --- */
+.contact-wrap {
+  background: #23233b !important;
+  color: #f6f6f6 !important;
+}
+.google-form-wrapper {
+  background: #191928 !important;
+  border-radius: 10px;
+}
+
+/* --- Testimonials --- */
+.testimonial-wrap blockquote {
+  background: #21213b !important;
+  border-left: 5px solid #ffc107 !important;
+  color: #f7f7f7 !important;
+}
+
+/* --- Buttons --- */
+.cta-button a,
+.read-more-btn {
+  background: #ffc107 !important;
+  color: #191928 !important;
+  border-radius: 9px !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+.cta-button a:hover,
+.read-more-btn:hover {
+  background: #ff9900 !important;
+  color: #fff !important;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background: #191925 !important;
+  color: #fff !important;
+}
+.footer-content h3 {
+  color: #ffc107 !important;
+}
+
+/* --- Scroll Buttons --- */
+.scroll-btn {
+  background: #181824 !important;
+  color: #ffc107 !important;
+  border: 2px solid #ffc107 !important;
+}
+.scroll-btn:hover {
+  background: #ffc107 !important;
+  color: #191925 !important;
+  border-color: #fff !important;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 600px) {
+  .page-section, .banners-section, .blog-post, .contact-wrap {
+    background: #161616 !important;
+  }
+  .banner-item {
+    background: #23233a !important;
+  }
+  .footer-content h3, .banners-title {
+    color: #ffc107 !important;
+  }
+}
+
+/* --- Remove white BGs on form elements (if needed) --- */
+input, textarea, select {
+  background: #222 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+}
+
+/* --- Optional: Dark border on all images --- */
+img {
+  border: 1px solid #24243a !important;
+}
