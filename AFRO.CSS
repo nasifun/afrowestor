@@ -788,6 +788,8 @@ video {
   margin-bottom: 12px !important;
 }
 
+/* Banners Gallery Section */
+
 .banners-gallery {
   padding: 32px 0 10px 0;
   background: #121212;
@@ -817,11 +819,10 @@ video {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.17s, box-shadow 0.18s;
   text-decoration: none;
-  min-height: 300px;
   position: relative;
   width: 100%;
+  /* REMOVE min-height! */
 }
 
 .banner img {
@@ -837,11 +838,12 @@ video {
 
 .banner-content {
   flex: 1;
-  padding: 16px 10px 14px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 16px 10px 14px 10px;
 }
+
 .banner-content h3 {
   font-family: 'Playfair Display', serif;
   color: #ffc107;
@@ -868,7 +870,7 @@ video {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   width: 100%;
-  margin-top: 7px;
+  margin-top: auto; /* Always pushes button to bottom if space allows */
 }
 
 .banner:hover img {
@@ -891,12 +893,12 @@ video {
     max-width: 99vw;
   }
   .banner {
-    min-height: 222px;
+    /* No min-height! */
     margin: 0 auto;
     border-radius: 10px;
   }
   .banner img {
-    height: 88px;
+    height: 80px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -914,6 +916,8 @@ video {
   .banner-btn {
     padding: 8px 0;
     font-size: 0.96rem;
+    margin-top: 10px;
   }
 }
+
 
