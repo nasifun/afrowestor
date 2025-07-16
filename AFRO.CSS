@@ -792,82 +792,110 @@ video {
 /* --- Improved styles for banners gallery, 2024-06-30 --- */
 
 .banners-section {
-  padding: 40px 0 40px 0;
+  padding: 28px 0 34px 0;
   background: #181828;
   text-align: center;
 }
 
 .banners-title {
   font-family: 'Work Sans', sans-serif;
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   color: #ffc107;
-  margin-bottom: 2rem;
-  font-weight: bold;
+  margin-bottom: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .banners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  max-width: 850px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .banner-item {
   display: flex;
   flex-direction: column;
   background: #23233a;
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
   text-decoration: none;
-  transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.2s;
+  transition: transform 0.22s cubic-bezier(.22,1,.36,1), box-shadow 0.18s;
   position: relative;
 }
 
-.banner-item:hover, .banner-item:focus {
-  transform: translateY(-6px) scale(1.025);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.22);
+.banner-item:active,
+.banner-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.23);
+  z-index: 2;
 }
 
 .banner-item img {
   width: 100%;
-  height: 170px;
+  aspect-ratio: 16/8.2;
+  min-height: 105px;
+  max-height: 180px;
   object-fit: cover;
-  display: block;
-  background: #222;
-  transition: filter 0.2s;
+  background: #23233a;
+  transition: filter 0.18s;
 }
 
-.banner-item:hover img, .banner-item:focus img {
-  filter: brightness(1.15) contrast(1.1);
+.banner-item:active img,
+.banner-item:hover img {
+  filter: brightness(1.13) contrast(1.11);
 }
 
 .banner-title {
   font-family: 'Playfair Display', serif;
   color: #fff;
-  background: linear-gradient(90deg, #191970 0%, #0f0c29 100%);
-  font-size: 1.15rem;
-  padding: 18px 8px;
-  min-height: 65px;
+  background: linear-gradient(90deg, #1a1a37 0%, #23233a 100%);
+  font-size: 1.07rem;
+  padding: 16px 10px;
+  min-height: 48px;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 900px) {
-  .banner-item img { height: 130px; }
-  .banner-title { font-size: 1rem; min-height: 56px; }
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  word-break: break-word;
 }
 
 @media (max-width: 600px) {
+  .banners-section {
+    padding: 16px 0 20px 0;
+  }
+  .banners-title {
+    font-size: 1.38rem;
+    margin-bottom: 1em;
+  }
   .banners-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 13px;
+    padding: 0 3vw;
+    max-width: 99vw;
   }
-  .banner-item img { height: 38vw; min-height: 120px; max-height: 200px; }
-  .banner-title { font-size: 0.98rem; min-height: 40px; }
+  .banner-item {
+    border-radius: 13px;
+  }
+  .banner-item img {
+    aspect-ratio: 18/8.2;
+    min-height: 90px;
+    max-height: 142px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+  }
+  .banner-title {
+    font-size: 0.95rem;
+    min-height: 35px;
+    padding: 10px 6px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
 }
+
 
