@@ -836,17 +836,18 @@ video {
   color: #232323;
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
-  font-size: 1rem;       /* Smaller font */
+  font-size: 0.91rem;
   border: none;
-  border-radius: 0 0 19px 19px;
-  padding: 10px 0 9px 0; /* Less padding */
+  border-radius: 0 0 14px 14px;
+  padding: 6px 0 5px 0;
   text-align: center;
-  width: 92%;            /* A bit of space on sides */
-  margin: 0 auto 10px auto;
+  width: 86%;
+  margin: 0 auto 5px auto;
   text-decoration: none;
-  transition: background 0.16s;
+  transition: background 0.13s;
   display: block;
 }
+
 
 .read-more-btn:hover,
 .read-more-btn:focus {
