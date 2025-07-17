@@ -1267,3 +1267,69 @@ img {
     margin: 0 auto;
   }
 }
+
+
+
+
+
+
+
+/* Responsive CSS for Mobile Devices */
+
+
+@media (max-width: 600px) {
+  .intro,
+  .page-section,
+  .banners-section,
+  .blog-post,
+  .contact-wrap {
+    padding: 18px 6px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body, .page-section, .intro, .blog-post {
+    font-size: 0.97rem !important;
+  }
+  .intro-text h2, .page-section h2 {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  nav a {
+    padding: 9px 0;
+    width: 100vw;
+    border-bottom: 1px solid #24243a;
+    background: #191925;
+    color: #ffc107;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+    grid-template-columns: 1fr !important;
+    gap: 13px !important;
+  }
+  .banner-item img {
+    height: 135px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .video-album {
+    grid-template-columns: 1fr !important;
+    padding: 0 2vw !important;
+    gap: 1vw !important;
+  }
+  .video-thumb {
+    max-width: 99vw !important;
+    font-size: 0.91rem !important;
+  }
+}
