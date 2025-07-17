@@ -1227,53 +1227,5 @@ img {
   }
 }
 
-/* --- Video Album & Thumb: Improved Responsive Squares --- */
-.video-album {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.2rem;
-  padding: 0 1.5rem;
-  justify-content: center;
-}
-
-/* Phone and small tablets */
-@media (max-width: 700px) {
-  .video-album {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
-    padding: 0 0.7rem;
-  }
-  .video-thumb {
-    width: 100%;
-    max-width: 100%;        /* Full column width */
-    aspect-ratio: 1 / 1;    /* Always square */
-    min-width: 0;           /* Prevents overflow */
-    margin: 0;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .video-album {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-    padding: 0 0.4rem;
-  }
-  .video-thumb {
-    width: 100%;
-    max-width: 100vw;
-    aspect-ratio: 1 / 1;    /* Always square */
-    min-width: 0;
-    margin: 0 auto;
-  }
-}
-
-
-
-
-
-
-
-/* Responsive CSS for Mobile Devices */
 
 
