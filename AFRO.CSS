@@ -1149,53 +1149,32 @@ img {
   #contact .contact-intro { font-size: 0.99rem; }
 }
 
-.video-gallery-section {
-  background: #181824 !important;
-  padding: 2rem 0;
-}
-
-.video-title {
-  color: #ffc107 !important;
-  text-align: center;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 1.8rem;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 10px #00000040;
-}
-
-.video-album {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
-  padding: 0 1.5rem;
-  justify-content: center;
-}
-
 .video-thumb {
   background: #22252a;
   border-radius: 13px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.14);
-  padding: 1rem 0.3rem 1.2rem 0.3rem;
+  padding: 0.5rem;
   text-align: center;
-  max-width: 320px;
+  max-width: 240px;    /* You can adjust this size! */
+  width: 100%;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* center everything vertically */
+  overflow: hidden;
 }
 
 .video-thumb img {
   width: 100%;
-  border-radius: 11px;
+  height: 100%;
+  object-fit: cover;    /* fill, crop if needed */
+  border-radius: 10px;
   box-shadow: 0 2px 12px #0007, 0 0 0 2px #ffc10730;
-  margin-bottom: 0.6rem;
-  object-fit: cover;
-  min-height: 94px;
-  max-height: 150px;
   background: #333;
+  display: block;
 }
 
 .video-thumb h3 {
@@ -1206,16 +1185,13 @@ img {
   text-shadow: 0 1px 10px #0007;
 }
 
-.play-icon {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.1rem;
-  color: #ffc107;
-  text-shadow: 0 0 8px #000, 0 0 3px #fff8;
-  pointer-events: none;
-  z-index: 2;
+/* Responsive: More thumbs per row on desktop, single on mobile */
+.video-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  padding: 0 1.5rem;
+  justify-content: center;
 }
 
 @media (max-width: 700px) {
@@ -1225,16 +1201,10 @@ img {
     padding: 0 0.6rem;
   }
   .video-thumb {
-    padding: 0.5rem 0.2rem 0.8rem 0.2rem;
     max-width: 99vw;
+    aspect-ratio: 1/1;
   }
-  .video-thumb img {
-    min-height: 66px;
-    max-height: 82px;
-  }
-  
 }
-
 @media (max-width: 480px) {
   .video-album {
     grid-template-columns: 1fr;
@@ -1242,41 +1212,7 @@ img {
   }
   .video-thumb {
     max-width: 99vw;
-    padding-bottom: 1.2rem;
+    aspect-ratio: 1/1;
   }
-  .video-thumb img {
-    min-height: 52px;
-    max-height: 82px;
-  }
-}
-.rent-service {
-  width: 350px;
-  aspect-ratio: 1 / 1;  /* Keeps card perfectly square */
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.20);
-  display: flex;
-  align-items: flex-end;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  position: relative;
-  margin: 0 1vw;
-  min-height: unset; /* Remove min-height if you had it */
-  max-width: 98vw;
 }
 
-@media (max-width: 900px) {
-  .rent-options { flex-direction: column; align-items: center; }
-  .rent-service {
-    width: 96vw;
-    aspect-ratio: 1 / 1;
-    max-width: 98vw;
-  }
-}
-@media (max-width: 600px) {
-  .rent-service {
-    width: 98vw;
-    aspect-ratio: 1 / 1;
-  }
-}
