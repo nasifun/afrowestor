@@ -1249,4 +1249,34 @@ img {
     max-height: 82px;
   }
 }
+.rent-service {
+  width: 350px;
+  aspect-ratio: 1 / 1;  /* Keeps card perfectly square */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.20);
+  display: flex;
+  align-items: flex-end;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+  margin: 0 1vw;
+  min-height: unset; /* Remove min-height if you had it */
+  max-width: 98vw;
+}
 
+@media (max-width: 900px) {
+  .rent-options { flex-direction: column; align-items: center; }
+  .rent-service {
+    width: 96vw;
+    aspect-ratio: 1 / 1;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .rent-service {
+    width: 98vw;
+    aspect-ratio: 1 / 1;
+  }
+}
