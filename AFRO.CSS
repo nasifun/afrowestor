@@ -867,6 +867,7 @@ video {
 /* DARK MODE */
 
 /* === GLOBAL DARK MODE BASE === */
+
 body {
   background: #161616 !important;
   color: #f7f7f7 !important;
@@ -1047,6 +1048,26 @@ nav a:hover {
   .footer-content h3, .banners-title {
     color: #ffc107 !important;
   }
+}
+
+.video-gallery-section,
+.video-gallery-section * {
+  color: #fff !important;
+}
+
+/* If you want the background to match your dark mode: */
+.video-gallery-section {
+  background: #1a1a25 !important;
+}
+
+/* (Optional) Tweak the video-thumb title for extra contrast */
+.video-gallery-section .video-thumb h3 {
+  color: #fff !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+.video-gallery-section .video-title {
+  color: #ffc107 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.17);
 }
 
 /* --- Remove white BGs on form elements (if needed) --- */
