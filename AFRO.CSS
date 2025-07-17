@@ -1060,3 +1060,70 @@ input, textarea, select {
 img {
   border: 1px solid #24243a !important;
 }
+
+/* --- Make Video Gallery Text White --- */
+.video-gallery-section,
+.video-title,
+.video-thumb h3 {
+  color: #fff !important;
+}
+.video-thumb h3 {
+  color: #fff !important;
+}
+
+/* --- Make 'Rent Me' Section Text White --- */
+#rent-me,
+#rent-me .rent-content,
+#rent-me h2,
+#rent-me .rent-content span,
+.rent-button {
+  color: #fff !important;
+}
+
+/* --- Optionally: Make Button Text Black (for contrast) --- */
+.rent-button {
+  color: #191928 !important;
+}
+
+/* --- contact cut to 50% size  --- */
+
+#contact.page-section.contact-wrap {
+  max-width: 680px;    /* About 50% of a 1000px max page section */
+  margin: 40px auto 40px auto; /* Center with margin above/below */
+  padding: 38px 20px;
+  border-radius: 16px;
+  background: #1c1c1c;   /* Dark background for dark mode */
+  box-shadow: 0 6px 24px rgba(10,10,20,0.14);
+}
+
+/* Make sure the Google Form stays inside */
+#contact .google-form-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.11);
+  overflow: hidden;
+  background: #10101a;
+}
+
+/* Smaller text and padding for a more compact feel */
+#contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  color: #ffc107;
+  text-align: center;
+}
+#contact .contact-intro {
+  font-size: 1.08rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Responsive: Full width on mobile! */
+@media (max-width: 700px) {
+  #contact.page-section.contact-wrap {
+    max-width: 97vw;
+    padding: 13px 2vw;
+  }
+  #contact h2 { font-size: 1.11rem; }
+  #contact .contact-intro { font-size: 0.99rem; }
+}
