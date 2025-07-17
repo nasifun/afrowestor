@@ -1232,6 +1232,7 @@ img {
     min-height: 66px;
     max-height: 82px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -1248,3 +1249,4 @@ img {
     max-height: 82px;
   }
 }
+
