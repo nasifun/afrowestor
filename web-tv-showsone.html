@@ -1,19 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Adventure Vacation – Afrowestor</title>
+  <title>Web TV Shows – Afrowestor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="styles.css" />
   <style>
-   body {
+    body {
   background: #161616;
   color: #fff;
   font-family: 'Playfair Display', serif;
   margin: 0;
   padding: 0;
 }
+
 .banner-detail {
   max-width: 760px;
   margin: 54px auto 40px auto;
@@ -23,19 +23,21 @@
   padding: 36px 24px 32px 24px;
   text-align: center;
 }
+
 .banner-detail-img {
   width: 100%;
   max-width: 100%;
-  max-height: 420px;
+  max-height: 420px;   /* Increase as needed for desktop */
   min-height: 180px;
   height: auto;
   object-fit: cover;
-  object-position: top center;
+  object-position: top center;  /* Shows more of the bottom */
   border-radius: 10px;
   margin-bottom: 30px;
   display: block;
   background: none;
 }
+
 .banner-detail h1 {
   color: #ffc107;
   font-size: 2.05rem;
@@ -44,6 +46,7 @@
   font-weight: 800;
   line-height: 1.18;
 }
+
 .banner-detail p {
   font-size: 1.17rem;
   color: #f2f2f2;
@@ -51,6 +54,7 @@
   margin-bottom: 30px;
   font-family: 'Playfair Display', serif;
 }
+
 .banner-detail ul {
   text-align: left;
   margin: 18px auto 0 auto;
@@ -59,6 +63,7 @@
   color: #fff8e1;
   padding-left: 17px;
 }
+
 .cta-button {
   background: #ffc107;
   color: #161616;
@@ -79,6 +84,7 @@
   background: #ff9900;
   color: #fff;
 }
+
 @media (max-width: 900px) {
   .banner-detail {
     max-width: 98vw;
@@ -89,6 +95,7 @@
     min-height: 92px;
   }
 }
+
 @media (max-width: 600px) {
   .banner-detail {
     padding: 13px 3vw 22px 3vw;
@@ -109,28 +116,54 @@
     width: 96%;
     font-size: 1.02rem;
   }
+
+  .banner-detail-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 400px;
+  min-height: 120px;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;   /* Show more of the bottom part of the image */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: block;
+  background: none;
 }
+
+@media (max-width: 600px) {
+  .banner-detail-img {
+    max-height: 220px;        /* Increased from 140px to 220px for mobile! */
+    min-height: 90px;
+    object-position: center bottom;   /* Force bottom part to show */
+    margin-bottom: 17px;
+  }
+}
+
+}
+
   </style>
 </head>
 <body>
   <section class="banner-detail">
-    <img src="ADVENTURE-VACATION.webp" alt="Adventure Vacation" class="banner-detail-img" />
-    <h1>Adventure Vacation – Travel Photography & Videography</h1>
+    <img src="WEB-TV-SHOWS.webp" alt="Web TV Shows" class="banner-detail-img" />
+    <h1>Web TV Shows – Creative Video Production</h1>
     <p>
-      <b>Bring your journey to life!</b><br><br>
-      From the ancient wonders of the world to magical Disney escapes, I help you remember every breathtaking moment. As an experienced travel photographer and filmmaker, I specialize in capturing authentic stories — candid smiles, vibrant culture, and awe-inspiring landscapes.
+      **From pilot to premiere, we handle it all.**<br><br>
+      Whether you’re launching a new show, producing talk shows or web series, or creating branded content, we deliver professional results—every step of the way.
       <br><br>
-      Let’s turn your next adventure into a cinematic story you’ll cherish forever. Get not just photos, but a creative experience tailored for you, your family, or your travel group.
+      <b>What’s Included:</b>
+      <ul style="text-align:left; margin:18px auto 0 auto; max-width:420px;">
+        <li>• Concept development and scriptwriting</li>
+        <li>• Studio or on-location filming</li>
+        <li>• Multi-cam and live streaming</li>
+        <li>• Animated intros and segment production</li>
+        <li>• Editing, color, and post-production</li>
+      </ul>
+      <br>
+      Ready for your big break? Book your show production with us!
     </p>
-    <ul>
-      <li> Full-day and multi-day travel photography</li>
-      <li> Short highlight videos & cinematic travel films</li>
-      <li> Drone footage and on-location interviews</li>
-      <li> Editing, color grading, and fast delivery</li>
-      <li> Custom packages for solo travelers, couples, and families</li>
-    </ul>
-    <br>
-    <a class="cta-button" href="https://payment-links.mollie.com/payment/V7QiC93QRof8kfFi8cppv" target="_blank">Book Your Adventure</a>
+    <a class="cta-button" href="contact.html">Book Your Show</a>
   </section>
 </body>
 </html>
