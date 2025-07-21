@@ -1,167 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Adventure Vacation – Afrowestor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="AFRO.CSS" />
   <style>
-   body {
-  background: #161616;
-  color: #fff;
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  padding: 0;
-}
-
-.banner-detail {
-  max-width: 760px;
-  margin: 54px auto 40px auto;
-  background: #222;
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(20,18,40,0.18);
-  padding: 36px 24px 32px 24px;
-  text-align: center;
-}
-
-.banner-detail-img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 420px;   /* Increase as needed for desktop */
-  min-height: 180px;
-  height: auto;
-  object-fit: cover;
-  object-position: top center;  /* Shows more of the bottom */
-  border-radius: 10px;
-  margin-bottom: 30px;
-  display: block;
-  background: none;
-}
-
-.banner-detail h1 {
-  color: #ffc107;
-  font-size: 2.05rem;
-  font-family: 'Work Sans', sans-serif;
-  margin-bottom: 18px;
-  font-weight: 800;
-  line-height: 1.18;
-}
-
-.banner-detail p {
-  font-size: 1.17rem;
-  color: #f2f2f2;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-}
-
-.banner-detail ul {
-  text-align: left;
-  margin: 18px auto 0 auto;
-  max-width: 420px;
-  font-size: 1.08rem;
-  color: #fff8e1;
-  padding-left: 17px;
-}
-
-.cta-button {
-  background: #ffc107;
-  color: #161616;
-  padding: 13px 33px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
-  font-size: 1.10rem;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.18s, color 0.18s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.11);
-  cursor: pointer;
-  margin-top: 12px;
-  display: inline-block;
-}
-.cta-button:hover {
-  background: #ff9900;
-  color: #fff;
-}
-
-@media (max-width: 900px) {
-  .banner-detail {
-    max-width: 98vw;
-    padding: 17px 4vw 18px 4vw;
-  }
-  .banner-detail-img {
-    max-height: 230px;
-    min-height: 92px;
-  }
-}
-
-@media (max-width: 600px) {
-  .banner-detail {
-    padding: 13px 3vw 22px 3vw;
-  }
-  .banner-detail h1 {
-    font-size: 1.12rem;
-  }
-  .banner-detail-img {
-    margin-bottom: 17px;
-    max-height: 140px;
-    min-height: 72px;
-  }
-  .banner-detail p, .banner-detail ul {
-    font-size: 1.03rem;
-  }
-  .cta-button {
-    padding: 11px 0;
-    width: 96%;
-    font-size: 1.02rem;
-  }
-  
-  .banner-detail-img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 400px;
-  min-height: 120px;
-  height: auto;
-  object-fit: cover;
-  object-position: center bottom;   /* Show more of the bottom part of the image */
-  border-radius: 10px;
-  margin-bottom: 30px;
-  display: block;
-  background: none;
-}
-
-@media (max-width: 600px) {
-  .banner-detail-img {
-    max-height: 220px;        /* Increased from 140px to 220px for mobile! */
-    min-height: 90px;
-    object-position: center bottom;   /* Force bottom part to show */
-    margin-bottom: 17px;
-  }
-}
-
-}
-
+    body {
+      background: #161616;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+    }
+    .banner-detail {
+      max-width: 760px;
+      margin: 54px auto 40px auto;
+      background: #222;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(20,18,40,0.18);
+      padding: 36px 24px 32px 24px;
+      text-align: center;
+    }
+    .banner-detail-img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .banner-detail h1 {
+      color: #ffc107;
+      font-size: 2.05rem;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+    .banner-detail p {
+      font-size: 1.17rem;
+      color: #f2f2f2;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+    .cta-button {
+      background: #ffc107;
+      color: #161616;
+      padding: 13px 33px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1.10rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.11);
+      cursor: pointer;
+      margin-top: 12px;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: #ff9900;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+
   <section class="banner-detail">
     <img src="ADVENTURE-VACATION.webp" alt="Adventure Vacation" class="banner-detail-img" />
-    <h1>Adventure Vacation – Travel Photography & Videography</h1>
+    <h1>Adventure Vacation – Secure Your Spot Today</h1>
     <p>
-      <b>Bring your journey to life!</b><br><br>
-      From the ancient wonders of the world to magical Disney escapes, I help you remember every breathtaking moment. As an experienced travel photographer and filmmaker, I specialize in capturing authentic stories — candid smiles, vibrant culture, and awe-inspiring landscapes.<br><br>
-      Let’s turn your next adventure into a cinematic story you’ll cherish forever. Get not just photos, but a creative experience tailored for you, your family, or your travel group.
+      Your contribution helps us tell powerful stories through photography and film.
+      Book now and be part of something meaningful. You’ll be redirected to Mollie for secure payment.
     </p>
-    <ul>
-      <li> Full-day and multi-day travel photography</li>
-      <li> Short highlight videos & cinematic travel films</li>
-      <li> Drone footage and on-location interviews</li>
-      <li> Editing, color grading, and fast delivery</li>
-      <li> Custom packages for solo travelers, couples, and families</li>
-    </ul>
-    <br>
-    <a class="cta-button" href="contact.html">Book Your Adventure</a>
+    <a class="cta-button" href="https://payment-links.mollie.com/payment/adventure123" target="_blank">Pay & Support</a>
   </section>
 </body>
 </html>
