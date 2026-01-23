@@ -739,6 +739,46 @@ Today, I bring decades of craft, intuition, and experience to every shoot. Wheth
   </div>
 </div>
 
+<script>
+  (function () {
+    const openBtn = document.getElementById("openStudioModal");
+    const modal = document.getElementById("studioModal");
+    const closeBtn = document.getElementById("closeStudioModal");
+
+    if (!openBtn || !modal || !closeBtn) return;
+
+    const openModal = () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden"; // prevent background scroll
+      closeBtn.focus();
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      openBtn.focus();
+    };
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+
+    // Click outside (backdrop)
+    modal.addEventListener("click", (e) => {
+      if (e.target && e.target.matches("[data-close='true']")) {
+        closeModal();
+      }
+    });
+
+    // ESC key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+  })();
+</script>
 
 
 </body>
