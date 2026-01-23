@@ -215,7 +215,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="tagline">
   <p class="intro-subtitle">Traveling wedding and elopement photographer + videographer...</p>
   <div class="hero-overlay">
-    <h1>PHOTOGRAPHER +<br>CINEMATOGRAPHER</h1>
+    <h1>
+  <button class="hero-trigger" id="openStudioModal" type="button" aria-haspopup="dialog" aria-controls="studioModal">
+    PHOTOGRAPHER
+  </button>
+  +<br>
+  CINEMATOGRAPHER
+</h1>
+
   </div>
 </section>
 
@@ -644,6 +651,93 @@ Today, I bring decades of craft, intuition, and experience to every shoot. Wheth
   </div>
 </footer>
 
+<!-- ✅ Studio / Photographer Services Modal -->
+<div class="aw-modal" id="studioModal" role="dialog" aria-modal="true" aria-labelledby="studioModalTitle" aria-hidden="true">
+  <div class="aw-modal__backdrop" data-close="true"></div>
+
+  <div class="aw-modal__panel" role="document">
+    <button class="aw-modal__close" type="button" aria-label="Close popup" id="closeStudioModal">×</button>
+
+    <div class="aw-modal__header">
+      <div>
+        <h2 id="studioModalTitle">AFROWESTOR Photo Studio</h2>
+        <p class="aw-modal__sub">
+          Professional portraits for LinkedIn, business, families, and babies — shot in Amsterdam.
+        </p>
+      </div>
+
+      <div class="aw-badge">
+        <span class="aw-badge__top">DISCOUNT</span>
+        <span class="aw-badge__price">€350</span>
+      </div>
+    </div>
+
+    <div class="aw-modal__body">
+      <!-- Images -->
+      <div class="aw-gallery">
+        <!-- Replace these file names with your real studio images -->
+        <a class="aw-gallery__item" href="studio-1.webp" target="_blank" rel="noopener">
+          <img src="studio-1.webp" alt="Afrowestor studio portrait sample 1" loading="lazy">
+        </a>
+        <a class="aw-gallery__item" href="studio-2.webp" target="_blank" rel="noopener">
+          <img src="studio-2.webp" alt="Afrowestor studio portrait sample 2" loading="lazy">
+        </a>
+        <a class="aw-gallery__item" href="studio-3.webp" target="_blank" rel="noopener">
+          <img src="studio-3.webp" alt="Afrowestor studio portrait sample 3" loading="lazy">
+        </a>
+        <a class="aw-gallery__item" href="studio-4.webp" target="_blank" rel="noopener">
+          <img src="studio-4.webp" alt="Afrowestor studio portrait sample 4" loading="lazy">
+        </a>
+      </div>
+
+      <!-- Services / Prices -->
+      <div class="aw-pricing">
+        <h3>Studio Packages</h3>
+
+        <div class="aw-price-card">
+          <div class="aw-price-row">
+            <span class="aw-service">LinkedIn Photographer</span>
+            <span class="aw-price">€350</span>
+          </div>
+          <p class="aw-note">Clean background, confident pose coaching, pro retouch included.</p>
+        </div>
+
+        <div class="aw-price-card">
+          <div class="aw-price-row">
+            <span class="aw-service">Profile Photograph</span>
+            <span class="aw-price">€350</span>
+          </div>
+          <p class="aw-note">Perfect for Instagram, dating, actors, creatives, and personal brands.</p>
+        </div>
+
+        <div class="aw-price-card">
+          <div class="aw-price-row">
+            <span class="aw-service">Baby Photographer</span>
+            <span class="aw-price">€350</span>
+          </div>
+          <p class="aw-note">Soft lighting, calm pacing, beautiful keepsake images for family.</p>
+        </div>
+
+        <div class="aw-price-card">
+          <div class="aw-price-row">
+            <span class="aw-service">Business Leaders Photographer</span>
+            <span class="aw-price">€350</span>
+          </div>
+          <p class="aw-note">Executive portraits for websites, press, teams, and brand identity.</p>
+        </div>
+
+        <div class="aw-actions">
+          <a class="aw-btn aw-btn--primary" href="#contact">Book a Session</a>
+          <a class="aw-btn" href="mailto:info@afrowestor.com">Email: info@afrowestor.com</a>
+        </div>
+
+        <p class="aw-small">
+          Tip: Replace the €350 with your “from €…” price if you want packages to vary.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
