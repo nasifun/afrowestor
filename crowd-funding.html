@@ -1,138 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Crowd Funding – Afrowestor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-   body {
-  background: #161616;
-  color: #fff;
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  padding: 0;
-}
-.banner-detail {
-  max-width: 760px;
-  margin: 54px auto 40px auto;
-  background: #222;
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(20,18,40,0.18);
-  padding: 36px 24px 32px 24px;
-  text-align: center;
-}
-.banner-detail-img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 420px;
-  min-height: 180px;
-  height: auto;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  display: block;
-  background: none;
-}
-.banner-detail h1 {
-  color: #ffc107;
-  font-size: 2.05rem;
-  font-family: 'Work Sans', sans-serif;
-  margin-bottom: 18px;
-  font-weight: 800;
-  line-height: 1.18;
-}
-.banner-detail p {
-  font-size: 1.17rem;
-  color: #f2f2f2;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-}
-.banner-detail ul {
-  text-align: left;
-  margin: 18px auto 0 auto;
-  max-width: 420px;
-  font-size: 1.08rem;
-  color: #fff8e1;
-  padding-left: 17px;
-}
-.cta-button {
-  background: #ffc107;
-  color: #161616;
-  padding: 13px 33px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
-  font-size: 1.10rem;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.18s, color 0.18s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.11);
-  cursor: pointer;
-  margin-top: 12px;
-  display: inline-block;
-}
-.cta-button:hover {
-  background: #ff9900;
-  color: #fff;
-}
-@media (max-width: 900px) {
-  .banner-detail {
-    max-width: 98vw;
-    padding: 17px 4vw 18px 4vw;
-  }
-  .banner-detail-img {
-    max-height: 230px;
-    min-height: 92px;
-  }
-}
-@media (max-width: 600px) {
-  .banner-detail {
-    padding: 13px 3vw 22px 3vw;
-  }
-  .banner-detail h1 {
-    font-size: 1.12rem;
-  }
-  .banner-detail-img {
-    margin-bottom: 17px;
-    max-height: 140px;
-    min-height: 72px;
-  }
-  .banner-detail p, .banner-detail ul {
-    font-size: 1.03rem;
-  }
-  .cta-button {
-    padding: 11px 0;
-    width: 96%;
-    font-size: 1.02rem;
-  }
-}
+    body {
+      background: #161616;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner-detail {
+      max-width: 760px;
+      margin: 54px auto 40px auto;
+      background: #222;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(20, 18, 40, 0.18);
+      padding: 36px 24px 32px 24px;
+      text-align: center;
+    }
+
+    .banner-detail-img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 420px;
+      min-height: 180px;
+      height: auto;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      display: block;
+      background: none;
+    }
+
+    .banner-detail h1 {
+      color: #ffc107;
+      font-size: 2.05rem;
+      font-family: 'Work Sans', sans-serif;
+      margin-bottom: 18px;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+
+    .banner-detail p {
+      font-size: 1.17rem;
+      color: #f2f2f2;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .banner-detail ul {
+      text-align: left;
+      margin: 18px auto 0 auto;
+      max-width: 420px;
+      font-size: 1.08rem;
+      color: #fff8e1;
+      padding-left: 17px;
+    }
+
+    .cta-button {
+      background: #ffc107;
+      color: #161616;
+      padding: 13px 33px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1.10rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.11);
+      cursor: pointer;
+      margin-top: 12px;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background: #ff9900;
+      color: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .banner-detail {
+        max-width: 98vw;
+        padding: 17px 4vw 18px 4vw;
+      }
+
+      .banner-detail-img {
+        max-height: 230px;
+        min-height: 92px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .banner-detail {
+        padding: 13px 3vw 22px 3vw;
+      }
+
+      .banner-detail h1 {
+        font-size: 1.12rem;
+      }
+
+      .banner-detail-img {
+        margin-bottom: 17px;
+        max-height: 140px;
+        min-height: 72px;
+      }
+
+      .banner-detail p,
+      .banner-detail ul {
+        font-size: 1.03rem;
+      }
+
+      .cta-button {
+        padding: 11px 0;
+        width: 96%;
+        font-size: 1.02rem;
+      }
+    }
   </style>
 </head>
+
 <body>
   <section class="banner-detail">
     <img src="CROWD-FUNDING.webp" alt="Crowd Funding" class="banner-detail-img" />
     <h1>Crowd Funding – Support Creative Films & Projects</h1>
     <p>
       <b>Become part of the story!</b><br><br>
-      Join a global network of supporters who bring creative ideas to life. Whether you want to see your name in the credits, support independent documentaries, or get involved in ground-breaking TV/web projects, you’re in the right place.<br><br>
+      Join a global network of supporters who bring creative ideas to life. Whether you want to see your name in the
+      credits, support independent documentaries, or get involved in ground-breaking TV/web projects, you’re in the
+      right place.<br><br>
       Your support helps us create films that matter, spark conversations, and change lives.
       <br><br>
       <b>Ways to Get Involved:</b>
-      <ul style="text-align:left; margin:18px auto 0 auto; max-width:420px;">
-        <li> Fund documentary, TV, or web film projects</li>
-        <li> Get early access to exclusive previews</li>
-        <li> Appear as a guest or in credits</li>
-        <li> Receive updates, behind-the-scenes, and rewards</li>
-        <li> Collaborate and network with the creative team</li>
-      </ul>
-      <br>
-      Ready to support real stories? Join our creative journey now!
+    <ul>
+      <li> Fund documentary, TV, or web film projects</li>
+      <li> Get early access to exclusive previews</li>
+      <li> Appear as a guest or in credits</li>
+      <li> Receive updates, behind-the-scenes, and rewards</li>
+      <li> Collaborate and network with the creative team</li>
+    </ul>
+    <br>
+    Ready to support real stories? Join our creative journey now!
     </p>
-    <a class="cta-button" href="https://payment-links.mollie.com/payment/yyvMWa6MtiWSaTbgbqTuh" target="_blank">Book Your Spot</a>
+    <a class="cta-button" href="https://payment-links.mollie.com/payment/yyvMWa6MtiWSaTbgbqTuh" target="_blank" rel="noopener">Book
+      Your Spot</a>
   </section>
 </body>
+
 </html>
