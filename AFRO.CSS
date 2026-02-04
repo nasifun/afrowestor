@@ -1416,12 +1416,13 @@ img {
 
 /* Body layout */
 .aw-modal__body {
-  padding: 18px 22px 24px 22px;
+  padding: 16px 18px 18px 18px;
   overflow: auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
 }
+
 
 /* Gallery */
 .aw-gallery {
@@ -1537,9 +1538,7 @@ img {
 
 /* Responsive */
 @media (max-width: 860px) {
-  .aw-modal__body {
-    grid-template-columns: 1fr;
-  }
+  
   .aw-gallery__item img {
     height: 190px;
   }
