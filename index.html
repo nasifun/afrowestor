@@ -315,7 +315,7 @@
       For over 20 years, I’ve been chasing light, framing moments, and capturing emotions — not just with a camera, but
       with my whole heart.
     </p>
-
+    <p>
     For over 20 years, I’ve been chasing light, framing moments, and capturing emotions — not just with a camera, but
     with my whole heart.
 
@@ -348,7 +348,7 @@
     a brand campaign in the city, or a quiet family moment in a backyard — I’m not just there to record. I’m there to
     see, to listen, and to tell your story like it matters — because it does.
 
-    .</p>
+    </p>
   </section>
 
   <section id="portfolio" class="page-section">
@@ -416,8 +416,7 @@
       </a>
     </div>
 
-
-
+</section>
 
 
     <section class="video-gallery-section">
@@ -641,13 +640,12 @@
 
 
     <!-- Lightbox Modal -->
-    <div class="video-lightbox" id="videoLightbox">
-      <div class="video-popup">
-        <span class="close-btn" onclick="closeLightbox()">&times;</span>
-        <iframe id="lightboxVideo" src="" width="100%" height="500px" frameborder="0" allow="autoplay; encrypted-media"
-          allowfullscreen title="Video player"></iframe>
-      </div>
-    </div>
+    <div class="video-lightbox" id="videoLightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;">
+  <div class="video-popup" style="position:relative; max-width:90%; max-height:90%;">
+    <span class="close-btn" onclick="closeLightbox()" style="position:absolute; top:-40px; right:0; font-size:2rem; color:white; cursor:pointer;">&times;</span>
+    <iframe id="lightboxVideo" src="" width="100%" height="500" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Video player"></iframe>
+  </div>
+</div>
 
     <!-- JavaScript to Handle Click and Lightbox -->
     <script>
