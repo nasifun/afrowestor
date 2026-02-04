@@ -1666,3 +1666,84 @@ img {
     flex-direction:column;
   }
 }
+
+
+/* =========================
+   FIX PRICING COLUMN ONLY (OVERRIDE)
+   Paste at VERY BOTTOM of AFRO.CSS
+   ========================= */
+
+.aw-modal .aw-pricing{
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 18px !important;
+  padding: 16px !important;
+  background: rgba(0,0,0,.28) !important;
+}
+
+.aw-modal .aw-pricing h3{
+  margin: 0 0 12px 0 !important;
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+}
+
+.aw-modal .aw-price-card{
+  border: 1px solid rgba(255,255,255,.10) !important;
+  border-radius: 14px !important;
+  padding: 12px 12px !important;
+  background: rgba(255,255,255,.03) !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.aw-modal .aw-price-row{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  gap: 10px !important;
+}
+
+.aw-modal .aw-service{
+  color: #fff !important;
+  font-weight: 900 !important;
+  font-size: 14px !important;
+}
+
+.aw-modal .aw-price{
+  color: #ffc107 !important;
+  font-weight: 900 !important;
+  font-family: 'Work Sans', sans-serif !important;
+  white-space: nowrap !important;
+  font-size: 14px !important;
+}
+
+.aw-modal .aw-note{
+  margin: 6px 0 0 0 !important;
+  color: rgba(255,255,255,.78) !important;
+  font-size: 12.8px !important;
+  line-height: 1.35 !important;
+}
+
+.aw-modal .aw-actions{
+  display: flex !important;
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+
+.aw-modal .aw-actions .aw-btn{
+  flex: 1 !important;
+}
+
+.aw-modal .aw-small{
+  margin-top: 10px !important;
+  font-size: 12px !important;
+  color: rgba(255,255,255,.70) !important;
+  line-height: 1.45 !important;
+}
+
+/* Mobile: buttons stack nicely */
+@media (max-width: 900px){
+  .aw-modal .aw-actions{
+    flex-direction: column !important;
+  }
+}
