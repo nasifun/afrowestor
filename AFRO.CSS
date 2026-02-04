@@ -1559,81 +1559,201 @@ img {
 
 
 /* =========================
-   FIX PRICING COLUMN ONLY (OVERRIDE)
-   Paste at VERY BOTTOM of AFRO.CSS
+   AFROWESTOR PHOTO MODAL (NO-CONFLICT CSS)
+   Uses unique classes: awx-*
    ========================= */
 
-.aw-modal .aw-pricing{
-  border: 1px solid rgba(255,255,255,.12) !important;
-  border-radius: 18px !important;
-  padding: 16px !important;
-  background: rgba(0,0,0,.28) !important;
+.awx-trigger{
+  background:transparent;
+  border:0;
+  padding:0;
+  margin:0;
+  font: inherit;
+  color: inherit;
+  cursor:pointer;
+  position:relative;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.awx-trigger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:100%;
+  height:2px;
+  background:#ffc107;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .18s ease;
+}
+.awx-trigger:hover::after,
+.awx-trigger:focus-visible::after{
+  transform:scaleX(1);
 }
 
-.aw-modal .aw-pricing h3{
-  margin: 0 0 12px 0 !important;
-  font-family: 'Work Sans', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 18px !important;
-  color: #fff !important;
+/* Modal shell */
+.awx-modal{position:fixed; inset:0; z-index:99999; display:none;}
+.awx-modal.is-open{display:block;}
+.awx-backdrop{position:absolute; inset:0; background:rgba(0,0,0,.78); backdrop-filter:blur(6px);}
+
+/* Panel */
+.awx-panel{
+  position:relative;
+  width:min(980px, calc(100vw - 24px));
+  margin:22px auto;
+  border-radius:18px;
+  overflow:hidden;
+  background:#191925;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 18px 60px rgba(0,0,0,.55);
 }
 
-.aw-modal .aw-price-card{
-  border: 1px solid rgba(255,255,255,.10) !important;
-  border-radius: 14px !important;
-  padding: 12px 12px !important;
-  background: rgba(255,255,255,.03) !important;
-  margin: 0 0 10px 0 !important;
+/* Close */
+.awx-close{
+  position:absolute;
+  top:12px; right:12px;
+  width:42px; height:42px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.35);
+  color:#fff;
+  font-size:26px;
+  cursor:pointer;
 }
 
-.aw-modal .aw-price-row{
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: baseline !important;
-  gap: 10px !important;
+/* Header */
+.awx-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:14px;
+  padding:18px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.awx-title{
+  margin:0;
+  font-family:'Work Sans', sans-serif;
+  font-weight:900;
+  color:#ffc107;
+  font-size:1.55rem;
+}
+.awx-sub{
+  margin-top:6px;
+  color:rgba(255,255,255,.82);
+  font-size:.95rem;
+  line-height:1.4;
+}
+.awx-badge{
+  background:#ffc107;
+  color:#111;
+  font-weight:900;
+  padding:8px 12px;
+  border-radius:14px;
+  white-space:nowrap;
 }
 
-.aw-modal .aw-service{
-  color: #fff !important;
-  font-weight: 900 !important;
-  font-size: 14px !important;
+/* Body layout: LEFT images / RIGHT pricing */
+.awx-body{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+  padding:16px 18px 18px;
 }
 
-.aw-modal .aw-price{
-  color: #ffc107 !important;
-  font-weight: 900 !important;
-  font-family: 'Work Sans', sans-serif !important;
-  white-space: nowrap !important;
-  font-size: 14px !important;
+/* Gallery left */
+.awx-gallery{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+}
+.awx-gallery img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  display:block;
 }
 
-.aw-modal .aw-note{
-  margin: 6px 0 0 0 !important;
-  color: rgba(255,255,255,.78) !important;
-  font-size: 12.8px !important;
-  line-height: 1.35 !important;
+/* Pricing right */
+.awx-pricing{
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  padding:16px;
+  background:rgba(0,0,0,.22);
+}
+.awx-h3{
+  margin:0 0 10px 0;
+  font-family:'Work Sans', sans-serif;
+  font-weight:900;
+  font-size:18px;
+  color:#fff;
 }
 
-.aw-modal .aw-actions{
-  display: flex !important;
-  gap: 10px !important;
-  margin-top: 12px !important;
+/* Compact cards so all fits (no scroll) */
+.awx-card{
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+  padding:10px 12px;
+  background:rgba(255,255,255,.03);
+  margin:0 0 10px 0;
+}
+.awx-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:10px;
+}
+.awx-service{
+  font-weight:900;
+  color:#fff;
+  font-size:13.5px;
+}
+.awx-price{
+  font-weight:900;
+  color:#ffc107;
+  white-space:nowrap;
+  font-size:13.5px;
+}
+.awx-note{
+  margin:6px 0 0 0;
+  color:rgba(255,255,255,.78);
+  font-size:12.2px;
+  line-height:1.25;
 }
 
-.aw-modal .aw-actions .aw-btn{
-  flex: 1 !important;
+/* Buttons */
+.awx-actions{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.awx-btn{
+  flex:1;
+  text-align:center;
+  padding:12px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  background:rgba(0,0,0,.25);
+}
+.awx-btn--primary{
+  background:#ffc107;
+  color:#111;
+  border-color:transparent;
+}
+.awx-small{
+  margin-top:8px;
+  font-size:11.8px;
+  color:rgba(255,255,255,.70);
+  line-height:1.35;
 }
 
-.aw-modal .aw-small{
-  margin-top: 10px !important;
-  font-size: 12px !important;
-  color: rgba(255,255,255,.70) !important;
-  line-height: 1.45 !important;
-}
-
-/* Mobile: buttons stack nicely */
+/* Mobile: stack */
 @media (max-width: 900px){
-  .aw-modal .aw-actions{
-    flex-direction: column !important;
-  }
+  .awx-body{grid-template-columns:1fr;}
+  .awx-actions{flex-direction:column;}
 }
