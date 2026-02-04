@@ -1416,13 +1416,12 @@ img {
 
 /* Body layout */
 .aw-modal__body {
-  padding: 16px 18px 18px 18px;
+  padding: 18px 22px 24px 22px;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 18px;
 }
-
 
 /* Gallery */
 .aw-gallery {
@@ -1538,7 +1537,9 @@ img {
 
 /* Responsive */
 @media (max-width: 860px) {
-  
+  .aw-modal__body {
+    grid-template-columns: 1fr;
+  }
   .aw-gallery__item img {
     height: 190px;
   }
@@ -1553,117 +1554,6 @@ img {
   }
   .aw-gallery__item img {
     height: 210px;
-  }
-}
-
-/* =========================
-   MODAL 2-COLUMN LAYOUT (DESKTOP)
-   ========================= */
-
-.aw-modal__body{
-  padding:16px 18px 18px 18px;
-  overflow:auto;
-  display:grid;
-  grid-template-columns: 2fr 1.1fr; /* gallery | text */
-  gap:20px;
-  align-items:start;
-}
-
-.aw-pricing{
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:20px;
-  padding:18px;
-  background:rgba(0,0,0,.28);
-}
-
-
-
-/* ONE BOX: LEFT IMAGES / RIGHT TEXT */
-
-.aw-layout{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:16px;
-  padding:16px;
-  overflow:hidden;
-}
-
-/* LEFT */
-.aw-gallery{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:12px;
-}
-
-.aw-gallery img{
-  width:100%;
-  aspect-ratio: 4 / 3;
-  object-fit:cover;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.12);
-}
-
-/* RIGHT */
-.aw-pricing{
-  display:flex;
-  flex-direction:column;
-}
-
-.aw-pricing h3{
-  margin:0 0 10px 0;
-  font-size:18px;
-  font-weight:900;
-}
-
-.aw-price-card{
-  border-bottom:1px solid rgba(255,255,255,.12);
-  padding:10px 0;
-}
-
-.aw-price-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-}
-
-.aw-service{
-  font-weight:800;
-}
-
-.aw-price{
-  font-weight:900;
-  color:#ffc107;
-}
-
-.aw-note{
-  font-size:13px;
-  opacity:.8;
-  margin-top:4px;
-}
-
-.aw-actions{
-  display:flex;
-  gap:10px;
-  margin-top:12px;
-}
-
-.aw-actions .aw-btn{
-  flex:1;
-}
-
-.aw-small{
-  margin-top:10px;
-  font-size:12px;
-  opacity:.7;
-}
-
-/* MOBILE */
-@media (max-width: 900px){
-  .aw-layout{
-    grid-template-columns:1fr;
-  }
-  .aw-actions{
-    flex-direction:column;
   }
 }
 
