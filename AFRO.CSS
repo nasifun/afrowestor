@@ -1757,3 +1757,63 @@ img {
   .awx-body{grid-template-columns:1fr;}
   .awx-actions{flex-direction:column;}
 }
+
+/* ===== FIX: ONE BOX LAYOUT (LEFT IMAGES / RIGHT PRICES) ===== */
+
+#studioModal .aw-modal__body.aw-layout{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+  align-items:start;
+}
+
+/* Gallery grid inside modal only */
+#studioModal .aw-gallery--grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+}
+
+#studioModal .aw-gallery--grid .aw-gallery__item img{
+  width:100%;
+  height:160px;          /* compact so you don't scroll */
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* Pricing spacing compact */
+#studioModal .aw-price-card{
+  padding:10px 12px;
+  margin-bottom:10px;
+}
+
+#studioModal .aw-note{
+  font-size:0.92rem;
+  line-height:1.3;
+}
+
+/* Buttons side by side on desktop */
+#studioModal .aw-actions{
+  display:flex;
+  gap:10px;
+}
+
+#studioModal .aw-actions .aw-btn{
+  flex:1;
+}
+
+/* Mobile: stack */
+@media (max-width: 860px){
+  #studioModal .aw-modal__body.aw-layout{
+    grid-template-columns:1fr;
+  }
+  #studioModal .aw-gallery--grid{
+    grid-template-columns:1fr;
+  }
+  #studioModal .aw-actions{
+    flex-direction:column;
+  }
+  #studioModal .aw-gallery--grid .aw-gallery__item img{
+    height:210px;
+  }
+}
