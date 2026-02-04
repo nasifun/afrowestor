@@ -1556,4 +1556,23 @@ img {
   }
 }
 
+/* =========================
+   MODAL 2-COLUMN LAYOUT (DESKTOP)
+   ========================= */
+
+.aw-modal__body{
+  padding:16px 18px 18px 18px;
+  overflow:auto;
+  display:grid;
+  grid-template-columns: 2fr 1.1fr; /* gallery | text */
+  gap:20px;
+  align-items:start;
+}
+
+.aw-pricing{
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:20px;
+  padding:18px;
+  background:rgba(0,0,0,.28);
+}
 
